@@ -22,4 +22,5 @@ After Classification of a Given chart image through [this classification model.]
   ![replot](readmeimages/(6).png)<br>
   * Finally, click on the save button to save all the data points into a text file.<br><br>
   ![replot](readmeimages/(7).png)<br>
-  * Also, the extracted text will be shown on the GUI Display.<br>
+  * Also, the extracted text will be shown on the GUI Display.<br><br>
+  ![extractedtextfile](readmeimages/(9).png)<br>
