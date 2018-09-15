@@ -7,7 +7,7 @@ This repository is an Image-Processing application for the automatic extraction 
 >- Gautam Yadav<BR>
 >- Ankita Makker<BR>
 >- Laveena Satwani<BR>
-=======
+
 After Classification of a Given chart image through [this classification model.](https://github.com/arpitjainds/Chart-Image-Classification)
 
 ## Extract Information from chart images through this Matlab Application 
