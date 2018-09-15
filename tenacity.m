@@ -112,8 +112,9 @@ set(handles.text17,'Visible','On')
 RGBocr=rgb2gray(RGB);
 thresh = graythresh(RGBocr);
 RGBocr = im2bw(RGBocr,thresh);
-results=ocr(RGBocr);
+results = ocr(RGBocr);
 set(handles.text16,'String',results.Text);
+handles.results = results;
 
 imshow(RGB);
 set(handles.text14,'Visible','On')
@@ -159,11 +160,17 @@ if (strfind(filename,'.txt')>=1)
 
  if isfield(handles,'v')
      v=handles.v
+     result=handles.results.Text;
      naa=num2str(v);
      set(handles.text19,'Visible','On')
      set(handles.text18,'Visible','On')
      set(handles.text18,'String',naa);
      save(file_dir,'v','-ASCII','-tabs');
+     
+     fid = fopen('text.txt','wt');  % Note the 'wt' for writing in text mode
+     fprintf(fid,'%s\n',result);  % The format string is applied to each element of a
+     fclose(fid);
+     
  else
      errordlg('No curve in memory ! ');
  end    
